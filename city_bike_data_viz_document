@@ -1,0 +1,26 @@
+NYC City Bike Data visualization: Year-2016 
+
+1. Most popular start station: Total trips for the YEAR 2016 is - 4,563,143. The Popular start station is "Pershing square North".
+The popular start station counts are  - 45,990. The distribution shown in the map. 
+2. Most popular stop station: Total trips for the YEAR 2016 is - 4,563,143. The Popular stop station is "Pershing square North".
+The Most popular stop station: Total trips for the YEAR 2016 is - 4,563,143. The Popular start station is "Pershing square North".
+The popular stop station counts are  - 45,065. The distribution shown in the map. 
+3. Average Trip duration by gender: Average trip duration by gender is further classified into user type. The 
+
+
+2.Finding Age Group: The dataset doesnot have the age group details. I uncover the deatils by creating the calculated field for the age group 
+using if-else conditions. 
+IF (INT(2016) - INT([Birth Year])) >= 15 AND (INT(2016) - INT([Birth Year])) < 24  THEN "Age 15-24"
+ELSEIF (INT(2016) - INT([Birth Year])) > 25 AND (INT(2016) - INT([Birth Year])) < 34  THEN "Age 25-34"
+ELSEIF (INT(2016) - INT([Birth Year])) > 35 AND (INT(2016)- INT([Birth Year])) < 44  THEN "Age 35-44"
+ELSEIF (INT(2016) - INT([Birth Year])) > 45 AND (INT(2016) - INT([Birth Year])) < 54  THEN "Age 45-54"
+ELSEIF (INT(2016) - INT([Birth Year])) > 55 AND (INT(2016) - INT([Birth Year])) < 64  THEN "Age 55-64"
+ELSE "Other"
+END  
+using the Age group partition I have calculated the Average trip duration by Age group and Number of trips by age group. 
+
+3. Finding days form given data: Split the month from the year using DatePart() method and using DateName() method split the weekdays.
+DATENAME("weekday",[Start Time])
+DATENAME('month',[Start Time])
+After uncovering the Days I can find the longest trip during the week. That is Saturday and Sunday, and the Popular months are June, July and August.
+Because the number of trip take dring those months are greate than the remaining months.  
