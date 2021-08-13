@@ -1,4 +1,4 @@
-# tableau_city_bike_data_viz
+# Tableau - NYC City Bike Data Visualization
 
 The NYC city bike dataset year 2016 have taken for data visualisation. 
 The dataset taken from  Citi Bike Data webpage - https://www.citibikenyc.com/system-data.
